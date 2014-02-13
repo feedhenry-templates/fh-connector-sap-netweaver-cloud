@@ -1,4 +1,5 @@
 {
+    "id": "sap_netweaver_cloud",
     "name": "SAP Netweaver",
     "type": "cloud_nodejs",
     "repoUrl": "https://github.com/feedhenry/fh-connector-sap-netweaver-cloud.git",
