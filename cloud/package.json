@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "dependencies": {
     "express": "3.3.4",
-    "fh-mbaas-api": "3.0.0-beta1",
-    "fh-mbaas-express": "3.0.0-beta2",
+    "fh-mbaas-api": "~3.0.0",
+    "fh-mbaas-express": "~3.0.0",
     "sapnwrfc": "0.1.5"
   }
 }
