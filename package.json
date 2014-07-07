@@ -25,5 +25,6 @@
     "grunt-node-inspector": "~0.1.5",
     "grunt-open": "~0.2.3",
     "grunt-plato": "~1.0.0"
-  }
+  },
+  "license": "mit"
 }
