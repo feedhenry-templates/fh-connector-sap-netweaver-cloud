@@ -18,11 +18,11 @@ app.use(cors());
 app.use('/sys', mbaasExpress.sys(securableEndpoints));
 app.use('/mbaas', mbaasExpress.mbaas);
 
-// Note: important that this is added just before your own Routes
-app.use(mbaasExpress.fhmiddleware());
-
 // allow serving of static files from the public directory
 app.use(express.static(__dirname + '/public'));
+
+// Note: important that this is added just before your own Routes
+app.use(mbaasExpress.fhmiddleware());
 
 // fhlint-begin: custom-routes
 app.use('/cloud', mbaasExpress.cloud(require('./main.js')));
