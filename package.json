@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "dependencies": {
     "express": "4.0.0",
-    "fh-mbaas-api" : "~4.5.0",
+    "fh-mbaas-api" : "^5.0.0",
     "request": "2.34.0",
     "body-parser": "~1.0.2",
     "cors": "~2.2.0",
@@ -26,5 +26,6 @@
     "grunt-open": "~0.2.3",
     "grunt-plato": "~1.0.0"
   },
-  "license": "mit"
+  "license": "mit",
+  "main": "application.js"
 }
