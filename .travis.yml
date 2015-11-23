@@ -3,6 +3,10 @@ node_js:
   - "0.10"
 sudo: false
 before_install:
+<<<<<<< HEAD
   - npm install -g npm@2.13.5
+=======
+  - npm install -g npm@2.14.9
+>>>>>>> Use npm v2 for travis
   - npm install -g grunt-cli
 install: npm install
