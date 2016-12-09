@@ -28,7 +28,7 @@
     "supertest": "0.8.2",
     "time-grunt": "^0.3.2"
   },
-  "license": "mit",
+  "license": "Apache-2.0",
   "main": "application.js",
   "scripts": {
     "start": "node application.js",
