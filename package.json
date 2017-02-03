@@ -3,9 +3,8 @@
   "version": "0.2.0",
   "dependencies": {
     "express": "4.0.0",
-    "request": "2.79.0",
-    "fh-mbaas-api": "6.1.4",
     "request": "2.34.0",
+    "fh-mbaas-api": "6.1.5",
     "body-parser": "~1.0.2",
     "cors": "~2.2.0",
     "sapnwrfc": "0.1.5"
