@@ -1,6 +1,7 @@
 FORMAT: 1A
 
 # FeedHenry SAP Netweaver Connector
+[![Dependency Status](https://img.shields.io/david/feedhenry-templates/fh-connector-sap-netweaver-cloud.svg?style=flat-square)](https://david-dm.org/feedhenry-templates/fh-connector-sap-netweaver-cloud)
 
 The FeedHenry SAP Netweaver Connector. For more information on SAP Netweaver see: [https://github.com/jdorner/node-sapnwrfc.git](https://github.com/jdorner/node-sapnwrfc.git).
 
