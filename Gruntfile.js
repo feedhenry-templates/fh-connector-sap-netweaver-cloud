@@ -79,13 +79,6 @@ module.exports = function(grunt) {
         },
         command: 'env NODE_PATH=. ./node_modules/.bin/mocha -A -u exports --recursive test/unit/'
       },
-      accept: {
-        options: {
-          stdout: true,
-          stderr: true
-        },
-        command: 'env NODE_PATH=. ./node_modules/.bin/mocha -A -u exports --recursive test/server.js test/accept/'
-      },
       coverage_unit: {
         options: {
           stdout: true,
@@ -93,21 +86,7 @@ module.exports = function(grunt) {
         },
         command: [
           'rm -rf coverage cov-unit',
-          'env NODE_PATH=. ./node_modules/.bin/istanbul cover --dir cov-unit ./node_modules/.bin/turbo -- test/unit',
-          './node_modules/.bin/istanbul report',
-          'echo "See html coverage at: `pwd`/coverage/lcov-report/index.html"'
-        ].join('&&')
-      },
-      coverage_accept: {
-        options: {
-          stdout: true,
-          stderr: true
-        },
-        command: [
-          'rm -rf coverage cov-accept',
-          'env NODE_PATH=. ./node_modules/.bin/istanbul cover --dir cov-accept ./node_modules/.bin/turbo -- --setUp=test/accept/server.js --tearDown=test/accept/server.js test/accept',
-          './node_modules/.bin/istanbul report',
-          'echo "See html coverage at: `pwd`/coverage/lcov-report/index.html"'
+          'env NODE_PATH=. ./node_modules/.bin/istanbul cover --dir cov-unit ./node_modules/.bin/_mocha -- -u exports -R spec ./test/unit/*.js'
         ].join('&&')
       }
     },
@@ -146,15 +125,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Testing tasks
-  grunt.registerTask('test', ['jshint', 'shell:unit', 'shell:accept']);
-  grunt.registerTask('unit', ['jshint', 'shell:unit']);
-  grunt.registerTask('accept', ['env:local', 'shell:accept']);
+  grunt.registerTask('test', ['env:local', 'shell:unit']); 
 
   // Coverate tasks
-  grunt.registerTask('coverage', ['shell:coverage_unit', 'shell:coverage_accept']);
-  grunt.registerTask('coverage-unit', ['shell:coverage_unit']);
-  grunt.registerTask('coverage-accept', ['env:local', 'shell:coverage_accept']);
-
+  grunt.registerTask('coverage', ['env:local', 'shell:coverage_unit']);
 
   grunt.registerTask('analysis', ['plato:src', 'open:platoReport']);
 
