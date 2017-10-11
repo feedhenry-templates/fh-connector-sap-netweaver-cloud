@@ -2,12 +2,13 @@
   "name": "fh-service-sap-netweaver-cloud",
   "version": "0.2.0",
   "dependencies": {
-    "express": "4.0.0",
-    "request": "2.34.0",
+    "express": "4.16.0",
+    "request": "2.81.0",
     "fh-mbaas-api": "~8.0.2",
-    "body-parser": "~1.0.2",
+    "body-parser": "~1.17.1",
     "cors": "~2.2.0",
-    "sapnwrfc": "0.1.5"
+    "sapnwrfc": "0.1.5",
+    "snyk": "^1.42.6"
   },
   "devDependencies": {
     "grunt": "^0.4.0",
@@ -36,6 +37,9 @@
     "serve": "grunt serve",
     "unit": "grunt test",
     "coverage": "grunt coverage",
-    "test": "npm run unit"
-  }
+    "test": "npm run unit",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
